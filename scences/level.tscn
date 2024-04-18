@@ -14,13 +14,14 @@ size = Vector2(621, 19)
 size = Vector2(791, 23)
 
 [node name="Level" type="Node2D"]
+position = Vector2(96, 19)
 script = ExtResource("1_ck7tu")
 
 [node name="Player" parent="." instance=ExtResource("2_3epsd")]
 position = Vector2(138, 129)
 
 [node name="Ground" type="StaticBody2D" parent="."]
-position = Vector2(3, 262)
+position = Vector2(16, 253)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
 modulate = Color(0.137255, 0.137255, 0.137255, 1)
@@ -42,21 +43,21 @@ position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_wsbp3")
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(52, 156)
+position = Vector2(132, 169)
 
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="JumpPad" parent="Objects" instance=ExtResource("4_1324x")]
-position = Vector2(282, 241)
+position = Vector2(281, 229)
 jump_force = 350
 
 [node name="Traps" type="Node2D" parent="."]
 
 [node name="Saw" parent="Traps" instance=ExtResource("5_hl5ol")]
-position = Vector2(215, 220)
+position = Vector2(369, 211)
 
 [node name="SpikeBall" parent="Traps" instance=ExtResource("6_qw3e4")]
-position = Vector2(14, 226)
+position = Vector2(8, 212)
 
 [connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
 [connection signal="touched_player" from="Traps/Saw" to="." method="_on_trap_touched_player"]
