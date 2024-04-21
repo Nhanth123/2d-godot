@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk311ufegr818"]
+[gd_scene load_steps=10 format=3 uid="uid://bk311ufegr818"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_ck7tu"]
 [ext_resource type="PackedScene" uid="uid://btjkwmvhmbb31" path="res://scences/player.tscn" id="2_3epsd"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://k7vmsiio36vm" path="res://scences/jump_pad.tscn" id="4_1324x"]
 [ext_resource type="PackedScene" uid="uid://bt7mp7p0m7oia" path="res://scences/saw.tscn" id="5_hl5ol"]
 [ext_resource type="PackedScene" uid="uid://0u3b6pq257vf" path="res://scences/spike_ball.tscn" id="6_qw3e4"]
+[ext_resource type="PackedScene" uid="uid://cpvan6hfi2j8t" path="res://scences/tile_map.tscn" id="7_tqu2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmc0o"]
 size = Vector2(621, 19)
@@ -21,7 +22,7 @@ script = ExtResource("1_ck7tu")
 position = Vector2(144, 165)
 
 [node name="Ground" type="StaticBody2D" parent="."]
-position = Vector2(-102, 252)
+position = Vector2(-133, -74)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
 modulate = Color(0.137255, 0.137255, 0.137255, 1)
@@ -58,5 +59,9 @@ position = Vector2(369, 211)
 
 [node name="SpikeBall" parent="Traps" groups=["traps"] instance=ExtResource("6_qw3e4")]
 position = Vector2(8, 212)
+
+[node name="TileMap" parent="." instance=ExtResource("7_tqu2h")]
+position = Vector2(142, 239)
+layer_0/tile_data = PackedInt32Array(131068, 458752, 1, 131069, 458752, 1, 131070, 458752, 1, 131071, 458752, 1, 65536, 458752, 1, 65537, 458752, 1, 65538, 458752, 1, 65539, 458752, 1, 65540, 458752, 1, 131076, 458752, 1, 131077, 458752, 1, 131078, 458752, 1, 65542, 458752, 1, 65541, 458752, 1, 65543, 458752, 1, 65532, 393216, 0, 65533, 393216, 0, 65534, 393216, 0, 65535, 393216, 0, 0, 393216, 0, 1, 393216, 0, 2, 393216, 0, 3, 393216, 0, 4, 393216, 0, 5, 393216, 0, 6, 393216, 0, 7, 393216, 0, 131075, 458752, 1, 131074, 458752, 1, 131073, 458752, 1, 131072, 458752, 1, 196607, 458752, 1, 196606, 458752, 1, 196605, 458752, 1, 196604, 458752, 1, 131079, 458752, 1, -458763, 1114112, 1, -458762, 1179648, 1, -458761, 1245184, 1, -458755, 1114112, 1, -458754, 1179648, 1, -458753, 1245184, 1, -524283, 1114112, 1, -524282, 1179648, 1, -524281, 1245184, 1, -196605, 1114112, 1, -196604, 1179648, 1, -196603, 1245184, 1)
 
 [connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
