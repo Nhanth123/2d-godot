@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bk311ufegr818"]
+[gd_scene load_steps=14 format=3 uid="uid://bk311ufegr818"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_ck7tu"]
 [ext_resource type="PackedScene" uid="uid://btjkwmvhmbb31" path="res://scences/player.tscn" id="2_3epsd"]
+[ext_resource type="PackedScene" uid="uid://palyh6djwdm3" path="res://scences/level_2.tscn" id="2_8pcyf"]
 [ext_resource type="PackedScene" uid="uid://b4ahr6i762nlv" path="res://scences/bg.tscn" id="2_ikm74"]
 [ext_resource type="Texture2D" uid="uid://dx267plakkp1y" path="res://icon.svg" id="3_i7tgp"]
 [ext_resource type="PackedScene" uid="uid://k7vmsiio36vm" path="res://scences/jump_pad.tscn" id="4_1324x"]
@@ -20,6 +21,7 @@ size = Vector2(1039, 23)
 [node name="Level" type="Node2D"]
 position = Vector2(96, 19)
 script = ExtResource("1_ck7tu")
+next_level = ExtResource("2_8pcyf")
 
 [node name="BG" parent="." instance=ExtResource("2_ikm74")]
 
@@ -67,7 +69,7 @@ layer_0/tile_data = PackedInt32Array(131068, 458752, 1, 131069, 458752, 1, 13107
 position = Vector2(142, 207)
 
 [node name="Exit" parent="." instance=ExtResource("10_vdc8k")]
-position = Vector2(91, 239)
+position = Vector2(528, 191)
 
 [node name="Player" parent="." instance=ExtResource("2_3epsd")]
 position = Vector2(144, 165)
