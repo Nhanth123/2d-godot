@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var start = $Start
 @onready var exit = $Exit
+@onready var death_zone = $Deathzone
 @export var next_level: PackedScene = null
 
 var player = null
@@ -22,6 +23,7 @@ func _ready():
 		trap.connect("touched_player", _on_trap_touched_player)
 	
 	exit.body_entered.connect(_on_exit_body_entered)
+	death_zone.body_entered.connect(_on_deathzone_body_entered)
 
 func _on_deathzone_body_entered(body):
 	reset_player()
