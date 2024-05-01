@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4nl7iqtk3ga0"]
+[gd_scene load_steps=6 format=3 uid="uid://b4nl7iqtk3ga0"]
 
 [ext_resource type="PackedScene" uid="uid://bey2yrbgqtdlw" path="res://scences/deathzone.tscn" id="1_j4kk6"]
 [ext_resource type="PackedScene" uid="uid://b4ahr6i762nlv" path="res://scences/bg.tscn" id="1_pymjc"]
 [ext_resource type="PackedScene" uid="uid://btjkwmvhmbb31" path="res://scences/player.tscn" id="2_a35bn"]
 [ext_resource type="Texture2D" uid="uid://bibvvidu514lx" path="res://assets/textures/bg/Purple.png" id="2_mdslr"]
+[ext_resource type="PackedScene" uid="uid://dfnk14s4p78ad" path="res://scences/ui.tscn" id="3_6dcw0"]
 
 [node name="Level_3" type="Node2D"]
 
 [node name="BG" parent="." instance=ExtResource("1_pymjc")]
 bg_texture = ExtResource("2_mdslr")
+
+[node name="UI" parent="." instance=ExtResource("3_6dcw0")]
 
 [node name="Deathzone" parent="." instance=ExtResource("1_j4kk6")]
 scale = Vector2(1.21168, 1.83321)

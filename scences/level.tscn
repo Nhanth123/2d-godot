@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b4ahr6i762nlv" path="res://scences/bg.tscn" id="2_ikm74"]
 [ext_resource type="PackedScene" uid="uid://k7vmsiio36vm" path="res://scences/jump_pad.tscn" id="4_1324x"]
 [ext_resource type="PackedScene" uid="uid://bey2yrbgqtdlw" path="res://scences/deathzone.tscn" id="4_cmnvl"]
-[ext_resource type="PackedScene" uid="uid://mgbe51vjowms" path="res://scences/ui.tscn" id="4_sgisg"]
+[ext_resource type="PackedScene" uid="uid://dfnk14s4p78ad" path="res://scences/ui.tscn" id="4_sgisg"]
 [ext_resource type="PackedScene" uid="uid://bt7mp7p0m7oia" path="res://scences/saw.tscn" id="5_hl5ol"]
 [ext_resource type="PackedScene" uid="uid://0u3b6pq257vf" path="res://scences/spike_ball.tscn" id="6_qw3e4"]
 [ext_resource type="PackedScene" uid="uid://cpvan6hfi2j8t" path="res://scences/tile_map.tscn" id="7_tqu2h"]

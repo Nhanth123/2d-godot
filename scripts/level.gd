@@ -3,13 +3,14 @@ extends Node2D
 @onready var start = $Start
 @onready var exit = $Exit
 @onready var death_zone = $Deathzone
+@onready var hub = $UI/HUD
+
 @export var next_level: PackedScene = null
-@export var level_time = 5
+@export var level_time = 6
 var player = null
 var time_node = null
 var time_left
 var win = false
-
 
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):
@@ -30,6 +31,7 @@ func _ready():
 	death_zone.body_entered.connect(_on_deathzone_body_entered)
 	
 	time_left = level_time
+	hub.set_time_label(time_left)
 	
 	time_node = Timer.new()
 	time_node.name = "Level Timer"
@@ -60,6 +62,9 @@ func _on_exit_body_entered(body):
 func _on_level_timer_timeout():
 	if win == false:
 		time_left -= 1
+		hub.set_time_label(time_left)
+		
 		if time_left < 0 :
 			reset_player()
 			time_left = level_time
+			hub.set_time_label(time_left)

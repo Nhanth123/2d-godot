@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://mgbe51vjowms"]
+[gd_scene load_steps=2 format=3 uid="uid://dfnk14s4p78ad"]
 
-[ext_resource type="PackedScene" uid="uid://cjnyejoi0bras" path="res://scences/hud.tscn" id="1_negn8"]
+[ext_resource type="PackedScene" uid="uid://babybwl6vnayp" path="res://scences/hud.tscn" id="1_negn8"]
 
 [node name="UI" type="CanvasLayer"]
 
