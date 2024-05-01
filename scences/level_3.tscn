@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4nl7iqtk3ga0"]
+[gd_scene load_steps=9 format=3 uid="uid://b4nl7iqtk3ga0"]
 
 [ext_resource type="PackedScene" uid="uid://bey2yrbgqtdlw" path="res://scences/deathzone.tscn" id="1_j4kk6"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_jfbhu"]
 [ext_resource type="PackedScene" uid="uid://b4ahr6i762nlv" path="res://scences/bg.tscn" id="1_pymjc"]
 [ext_resource type="PackedScene" uid="uid://btjkwmvhmbb31" path="res://scences/player.tscn" id="2_a35bn"]
 [ext_resource type="Texture2D" uid="uid://bibvvidu514lx" path="res://assets/textures/bg/Purple.png" id="2_mdslr"]
 [ext_resource type="PackedScene" uid="uid://dfnk14s4p78ad" path="res://scences/ui.tscn" id="3_6dcw0"]
+[ext_resource type="PackedScene" uid="uid://7nnvbore6piw" path="res://scences/start.tscn" id="6_w4onk"]
+[ext_resource type="PackedScene" uid="uid://bj1xwwq8kp1da" path="res://scences/exit.tscn" id="7_tkmfm"]
 
 [node name="Level_3" type="Node2D"]
+script = ExtResource("1_jfbhu")
+is_final_level = true
 
 [node name="BG" parent="." instance=ExtResource("1_pymjc")]
 bg_texture = ExtResource("2_mdslr")
@@ -17,3 +22,8 @@ bg_texture = ExtResource("2_mdslr")
 scale = Vector2(1.21168, 1.83321)
 
 [node name="Player" parent="." instance=ExtResource("2_a35bn")]
+
+[node name="Start" parent="." instance=ExtResource("6_w4onk")]
+
+[node name="Exit" parent="." instance=ExtResource("7_tkmfm")]
+position = Vector2(2.08165e-12, -32)
