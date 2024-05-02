@@ -7,7 +7,7 @@ extends Node2D
 @onready var ui = $UI
 
 @export var next_level: PackedScene = null
-@export var level_time = 6
+@export var level_time = 45
 @export var is_final_level: bool = false
  
 var player = null

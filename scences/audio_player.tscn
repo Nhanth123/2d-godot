@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://1rbbbvf728i0"]
+
+[ext_resource type="AudioStream" uid="uid://cc0vkwx3sv6kv" path="res://assets/audio/Blue Sirens - Countryside Slumber.mp3" id="1_ngm1w"]
+
+[node name="AudioPlayer" type="Node"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ngm1w")
+volume_db = -5.0
+autoplay = true
+mix_target = 2

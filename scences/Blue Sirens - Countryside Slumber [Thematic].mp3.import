@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lu4x82hp3s83"
+path="res://.godot/imported/Blue Sirens - Countryside Slumber [Thematic].mp3-544a74ece57d73d5c3637204629ff141.mp3str"
+
+[deps]
+
+source_file="res://scences/Blue Sirens - Countryside Slumber [Thematic].mp3"
+dest_files=["res://.godot/imported/Blue Sirens - Countryside Slumber [Thematic].mp3-544a74ece57d73d5c3637204629ff141.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
