@@ -7,7 +7,7 @@ extends Node2D
 @onready var ui = $UI
 
 @export var next_level: PackedScene = null
-@export var level_time = 45
+@export var level_time = 60
 @export var is_final_level: bool = false
  
 var player = null
@@ -44,9 +44,11 @@ func _ready():
 	time_node.start()
 
 func _on_deathzone_body_entered(body):
+	AudioPlayer.play_sfx("hurt")
 	reset_player()
 
 func _on_trap_touched_player():
+	AudioPlayer.play_sfx("hurt")
 	reset_player()
 
 func reset_player():
